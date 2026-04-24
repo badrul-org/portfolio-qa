@@ -1,0 +1,130 @@
+BADRUL ALAM
+Software Quality Assurance Engineer
+Dhaka, Bangladesh • (+880) 01793-693774 • me@badrulalam.dev
+linkedin.com/in/badrul02 • upwork.com/freelancers/badrul11 • github.com/badrul-org
+
+PROFESSIONAL SUMMARY
+Software QA Engineer with 4+ years of experience specializing in test automation strategies, API testing, and CI/CD
+integration across fintech and e-commerce platforms. Currently the sole QA owner for an AI-driven sales tax platform with
+28+ integrations (Shopify, Amazon, Stripe, NetSuite, QuickBooks, Zuora), where I built the entire Playwright (TypeScript) +
+Allure + CI test infrastructure from scratch, reducing manual regression by ~40%. Proficient in Selenium (Java), Cypress,
+Appium, Postman/Newman, JMeter, and POM-based framework design. Published NLP researcher (IEEE 3ICT Conference)
+and Upwork Top Rated freelancer.
+
+TECHNICAL SKILLS
+Test Automation
+
+Selenium WebDriver (Java), Playwright (TypeScript), Cypress (JS), Appium (Android),
+Robot Framework, Behave (BDD), JMeter, Locust, TestNG, JUnit, Pytest
+
+Design Patterns
+
+Page Object Model (POM), Data-Driven Testing, Keyword-Driven Testing, Hybrid
+Automation Frameworks
+
+API Testing
+
+Postman (Collections, Newman CLI), REST Assured (Java), REST API Testing, Chai
+Assertions, JSON Schema Validation
+
+Languages
+
+Python (Advanced), JavaScript/TypeScript (Advanced), Java (Intermediate), Bash/Shell
+(Advanced), SQL (Intermediate)
+
+CI/CD & Cloud
+
+GitHub Actions, GitLab CI, Jenkins, Docker, Kubernetes, AWS (EC2, S3), Linux, Nginx,
+IaC
+
+QA Practices
+
+Test Planning, Regression/Smoke/Exploratory Testing, Performance & Load Testing,
+Defect Triage (P0–P3), Agile/Scrum
+
+Tools
+
+Jira, ClickUp, Trello, Git/GitHub/GitLab, Confluence, Slack
+
+AI/ML & NLP
+
+BanglaBERT, Transformers, Multi-Task Learning, Sentiment Analysis, Django, Flask
+
+PROFESSIONAL EXPERIENCE
+Software Quality Assurance Engineer | Kintsugi (AI-Driven Sales Tax Automation)
+Sep 2024 – Present | Remote, United States
+
+• Own end-to-end quality assurance across 28+ API integrations spanning e-commerce (Shopify, Amazon, BigCommerce,
+WooCommerce, Walmart, Etsy, Wix, Magento), ERP/accounting (NetSuite, QuickBooks, Xero, Sage Intacct, MS Dynamics
+365 Business Central), billing (Stripe, Zuora, Chargebee, Recurly, Maxio, Orb), and payments (Airwallex, Deel).
+• Build and maintain automated E2E test suites using Playwright (TypeScript) with Page Object Model architecture,
+integrated with Allure reporting for detailed test analytics and traceability.
+• Architect CI/CD-integrated test pipelines: Playwright tests and Postman/Newman API collections run automatically on
+every build, with Allure reports generated and test result notifications pushed to Slack for real-time team visibility.
+• Execute comprehensive manual integration testing across all 28+ platform connectors for complex workflows that
+cannot be automated, ensuring data accuracy for tax calculations, transaction syncing, and multi-jurisdiction compliance.
+• Validate complex tax computation logic across multi-state U.S. and international jurisdictions, testing integration-specific
+data flows for entities like Vertex O-Series and CheckoutChamp.
+• Implement structured defect management using P0–P3 priority framework; collaborate cross-functionally with
+engineering, product, and DevOps to optimize release confidence.
+
+DevOps & Test Automation Engineer | QUPS
+Sep 2023 – Aug 2024 | Dhaka, Bangladesh
+
+• Built and maintained CI/CD pipelines using GitHub Actions and GitLab CI, automating microservices deployment and
+reducing deployment failures by ~30%.
+• Developed automated test suites using Python Robot Framework for web testing and Appium for Android mobile
+testing, integrating both into the DevOps lifecycle.
+
+• Conducted performance and load testing using JMeter and Locust to identify bottlenecks, validate system scalability
+under peak traffic, and ensure SLA compliance for production services.
+• Managed containerized testing environments using Docker and Kubernetes, eliminating environment-specific failures
+and improving test reliability.
+
+DevTestOps Engineer | Aptovet
+Jun 2022 – Sep 2023 | Dhaka, Bangladesh (Hybrid)
+
+• Designed and maintained automated test frameworks using Java, Selenium WebDriver, JUnit, and Docker with Page
+Object Model (POM) design pattern for scalable web automation.
+• Built end-to-end and cross-browser test suites using Cypress (JavaScript), complementing Selenium-based regression
+packs for faster feedback loops.
+• Automated API testing using REST Assured (Java) for backend service validation and Postman/Newman CLI for collectionbased regression, reducing manual API validation time by ~50%.
+• Integrated automated tests into CI/CD pipelines (GitHub Actions) and implemented IaC practices using Docker to
+standardize testing environments.
+
+QA Engineer (DevOps Intern) | Compozent
+Mar 2022 – Jun 2022 | Remote, India
+
+• Designed and executed functional, regression, smoke, and exploratory test cases, identifying and documenting defects in
+Jira.
+• Assisted in Docker containerization of applications and gained foundational experience in cloud orchestration and
+release management.
+
+KEY PROJECTS
+E2E Test Automation Infrastructure | Kintsugi | Playwright (TypeScript), Allure, GitHub Actions, Slack API
+• Architected and built the entire E2E test automation framework from scratch using Playwright (TypeScript) with Page
+Object Model, covering critical user flows across the tax automation platform.
+• Integrated Allure reporting into the CI pipeline with automatic Slack notifications on test completion, giving the
+engineering team real-time visibility into build quality.
+• Reduced manual regression testing effort by ~40% and cut release validation time, enabling faster and more confident
+deployments.
+API Regression Automation Pipeline | Kintsugi | Postman, Newman CLI, GitHub Actions, Chai/JSON Schema
+• Designed Postman collections with Chai assertions and JSON Schema validation covering 28+ integration API contracts,
+automated via Newman CLI on CI for continuous regression testing with zero manual intervention.
+
+EDUCATION
+Bachelor of Science in Computer Science & Engineering
+Daffodil International University (DIU) | Dhaka, Bangladesh | May 2021 – Jun 2025 | CGPA: 3.44 / 4.00
+
+PUBLICATION
+Advancing Bangla NLP: A Dual-Headed Transformer Model for News Topic and Sentiment Classification
+Published & Presented at IEEE 3ICT Conference (2025)
+
+• Developed a novel dual-headed BanglaBERT transformer architecture using Multi-Task Learning (MTL) for simultaneous
+topic classification and sentiment analysis on Bangla news data, outperforming single-task baselines.
+
+RECOGNITION & LANGUAGES
+Upwork Top Rated Freelancer – 90%+ Job Success Score, international test automation clients (2025)
+Languages: Bengali (Native) • English (Professional Working Proficiency – B2/C1)
+
+
