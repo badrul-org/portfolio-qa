@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://badrulalam.dev/sitemap.xml
+Sitemap: https://www.badrulalam.dev/sitemap.xml
