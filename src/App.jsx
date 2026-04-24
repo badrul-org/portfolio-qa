@@ -407,7 +407,7 @@ function App() {
 
       <div className="noise-overlay"></div>
 
-      <div className="relative z-10 w-full font-sans overflow-hidden cursor-none">
+      <main className="relative z-10 w-full font-sans overflow-hidden cursor-none">
 
         {/* Navigation */}
         <nav className="fixed top-0 w-full p-6 mix-blend-difference z-50 flex justify-between items-center text-white backdrop-blur-md bg-transparent">
@@ -429,15 +429,15 @@ function App() {
           </ul>
 
           {/* Mobile Hamburger */}
-          <div className="sm:hidden cursor-pointer hover-target" onClick={() => setIsMobileMenuOpen(true)}>
+          <button className="sm:hidden cursor-pointer hover-target" aria-label="Open Mobile Menu" onClick={() => setIsMobileMenuOpen(true)}>
             <Menu size={28} />
-          </div>
+          </button>
         </nav>
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
           <div className="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl flex flex-col items-center justify-center text-white sm:hidden transition-all duration-300">
-            <div className="absolute top-6 right-6 cursor-pointer hover-target" onClick={() => setIsMobileMenuOpen(false)}>
+            <div className="absolute top-6 right-6 cursor-pointer hover-target" aria-label="Close Mobile Menu" onClick={() => setIsMobileMenuOpen(false)}>
               <X size={32} />
             </div>
             <ul className="flex flex-col gap-10 text-2xl font-bold tracking-widest text-center">
@@ -466,8 +466,9 @@ function App() {
               <span className="text-xs font-mono tracking-widest uppercase opacity-90">Available for Q3 2026 engagements</span>
             </div>
             <h1 className="font-display text-[12vw] md:text-[10vw] leading-none font-bold tracking-tighter mb-6 flex justify-center gap-4 flex-wrap text-glow">
-              <SplitText>BADRUL</SplitText>
-              <SplitText>ALAM</SplitText>
+              <span className="sr-only">Badrul Alam - Software QA Engineer & Test Automation Architect</span>
+              <Magnetic><span>BADRUL</span></Magnetic>
+              <Magnetic><span className="text-stroke text-transparent">ALAM</span></Magnetic>
             </h1>
             <p className="hero-subtitle font-display text-lg md:text-2xl tracking-widest uppercase opacity-90 mb-3">
               Software QA Engineer · <span className="gradient-text">Test Automation Architect</span>
@@ -621,7 +622,7 @@ function App() {
                   >
                     <div className="absolute inset-0 z-0">
                       <div className="absolute inset-0 bg-gradient-to-t from-[#010912] via-[#010912]/80 to-transparent z-10"></div>
-                      <img src={p.img} alt={p.title} className="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-1000" />
+                      <img src={p.img} alt={`${p.title} - Software QA Automation Case Study`} className="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-1000" />
                     </div>
                     <div className="absolute inset-0 z-10 flex flex-col justify-end p-4 md:p-12">
                       <div className="bg-background/40 backdrop-blur-2xl p-6 md:p-8 rounded-[1.5rem] md:rounded-3xl border border-white/10 max-w-4xl shadow-2xl">
@@ -775,7 +776,7 @@ function App() {
           </footer>
         </section>
 
-      </div>
+      </main>
     </>
   );
 }
