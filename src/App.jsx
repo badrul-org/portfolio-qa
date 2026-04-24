@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import Lenis from '@studio-freight/lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Menu, X } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -280,6 +281,7 @@ const accentMap = {
 function App() {
   const cursorRef = useRef();
   const cursorDotRef = useRef();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -412,6 +414,8 @@ function App() {
           <Magnetic>
             <div className="font-display font-bold text-xl tracking-widest cursor-pointer hover-target" onClick={() => window.scrollTo(0, 0)}>B.A.</div>
           </Magnetic>
+          
+          {/* Desktop Menu */}
           <ul className="hidden sm:flex gap-6 md:gap-8 text-xs md:text-sm font-medium tracking-wider">
             <Magnetic><li className="cursor-pointer hover-target transition-colors" onClick={() => scrollTo('about')}>ABOUT</li></Magnetic>
             <Magnetic><li className="cursor-pointer hover-target transition-colors" onClick={() => scrollTo('experience')}>EXPERIENCE</li></Magnetic>
@@ -423,7 +427,28 @@ function App() {
               </li>
             </Magnetic>
           </ul>
+
+          {/* Mobile Hamburger */}
+          <div className="sm:hidden cursor-pointer hover-target" onClick={() => setIsMobileMenuOpen(true)}>
+            <Menu size={28} />
+          </div>
         </nav>
+
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div className="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl flex flex-col items-center justify-center text-white sm:hidden transition-all duration-300">
+            <div className="absolute top-6 right-6 cursor-pointer hover-target" onClick={() => setIsMobileMenuOpen(false)}>
+              <X size={32} />
+            </div>
+            <ul className="flex flex-col gap-10 text-2xl font-bold tracking-widest text-center">
+              <li className="cursor-pointer hover:text-primary transition-colors" onClick={() => { scrollTo('about'); setIsMobileMenuOpen(false); }}>ABOUT</li>
+              <li className="cursor-pointer hover:text-primary transition-colors" onClick={() => { scrollTo('experience'); setIsMobileMenuOpen(false); }}>EXPERIENCE</li>
+              <li className="cursor-pointer hover:text-primary transition-colors" onClick={() => { scrollTo('projects'); setIsMobileMenuOpen(false); }}>PROJECTS</li>
+              <li className="cursor-pointer hover:text-primary transition-colors" onClick={() => { scrollTo('feedback'); setIsMobileMenuOpen(false); }}>FEEDBACK</li>
+              <li className="cursor-pointer text-primary" onClick={() => { scrollTo('contact'); setIsMobileMenuOpen(false); }}>LET'S TALK</li>
+            </ul>
+          </div>
+        )}
 
         {/* Hero Section */}
         <section className="hero-section h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
@@ -549,7 +574,7 @@ function App() {
               const a = accentMap[exp.accent];
               return (
                 <div key={idx} className="fade-up">
-                  <div className="grad-border glass p-10 md:p-16 rounded-[2.5rem] group hover-target hover:bg-surface-high/60 transition-all duration-700 relative overflow-hidden backdrop-blur-2xl tilt-card">
+                  <div className="grad-border glass p-6 md:p-16 rounded-[1.5rem] md:rounded-[2.5rem] group hover-target hover:bg-surface-high/60 transition-all duration-700 relative overflow-hidden backdrop-blur-2xl tilt-card">
                     <div className={`absolute -top-20 -right-20 w-64 h-64 rounded-full bg-gradient-to-br ${a.gradFrom} to-transparent opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-700 pointer-events-none`}></div>
                     <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${a.gradFrom} to-white/0 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out`}></div>
                     <div className="flex flex-col md:flex-row gap-12 justify-between items-start">
@@ -592,16 +617,16 @@ function App() {
                 return (
                   <div
                     key={p.title}
-                    className={`project-card sticky top-[100px] w-full h-[60vh] glass rounded-[3rem] border border-white/10 overflow-hidden ${isLast ? 'mb-8' : 'mb-24'} group hover-target ${a.borderHover} transition-colors duration-500`}
+                    className={`project-card sticky top-[100px] w-full h-[75vh] md:h-[60vh] glass rounded-[2rem] md:rounded-[3rem] border border-white/10 overflow-hidden ${isLast ? 'mb-8' : 'mb-24'} group hover-target ${a.borderHover} transition-colors duration-500`}
                   >
                     <div className="absolute inset-0 z-0">
                       <div className="absolute inset-0 bg-gradient-to-t from-[#010912] via-[#010912]/80 to-transparent z-10"></div>
                       <img src={p.img} alt={p.title} className="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-1000" />
                     </div>
-                    <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 md:p-12">
-                      <div className="bg-background/40 backdrop-blur-2xl p-8 rounded-3xl border border-white/10 max-w-4xl shadow-2xl">
+                    <div className="absolute inset-0 z-10 flex flex-col justify-end p-4 md:p-12">
+                      <div className="bg-background/40 backdrop-blur-2xl p-6 md:p-8 rounded-[1.5rem] md:rounded-3xl border border-white/10 max-w-4xl shadow-2xl">
                         <p className={`${a.text} font-mono text-xs tracking-widest uppercase mb-3 font-bold`}>{p.client}</p>
-                        <h3 className="text-3xl md:text-4xl text-white font-bold mb-4 font-display">{p.title}</h3>
+                        <h3 className="text-2xl md:text-4xl text-white font-bold mb-4 font-display">{p.title}</h3>
                         <p className="text-white/80 text-base md:text-lg leading-relaxed mb-6">{p.body}</p>
                         <div className="flex gap-3 flex-wrap">
                           {p.tags.map((t) => (
@@ -666,9 +691,9 @@ function App() {
                     {TESTIMONIALS.map((t, i) => {
                       const a = accentMap[t.accent];
                       return (
-                        <div key={`${idx}-${i}`} className={`w-[350px] md:w-[450px] shrink-0 grad-border glass p-10 rounded-[2.5rem] relative overflow-hidden group hover-target ${a.borderHover} transition-colors tilt-card`}>
-                          <div className={`${a.text} text-[10rem] absolute -top-10 -left-4 opacity-10 font-serif leading-none group-hover:scale-110 transition-transform duration-500`}>"</div>
-                          <p className="text-white/85 text-lg leading-relaxed mb-10 relative z-10 min-h-[180px]">
+                        <div key={`${idx}-${i}`} className={`w-[300px] md:w-[450px] shrink-0 grad-border glass p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] relative overflow-hidden group hover-target ${a.borderHover} transition-colors tilt-card`}>
+                          <div className={`${a.text} text-[6rem] md:text-[10rem] absolute -top-4 md:-top-10 -left-2 md:-left-4 opacity-10 font-serif leading-none group-hover:scale-110 transition-transform duration-500`}>"</div>
+                          <p className="text-white/85 text-base md:text-lg leading-relaxed mb-8 md:mb-10 relative z-10 min-h-[150px] md:min-h-[180px]">
                             {t.quote}
                           </p>
                           <div className="flex items-center gap-4 relative z-10">
@@ -716,7 +741,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="fade-up glass p-10 md:p-12 rounded-[2.5rem] border border-white/10 relative overflow-hidden backdrop-blur-xl">
+              <div className="fade-up glass p-6 md:p-12 rounded-[2rem] md:rounded-[2.5rem] border border-white/10 relative overflow-hidden backdrop-blur-xl">
                 <form action="https://formspree.io/f/mjgjlvyo" method="POST" className="space-y-6">
                   <div className="flex flex-col gap-2 group">
                     <label className="text-secondary text-sm font-bold tracking-widest uppercase group-focus-within:text-primary transition-colors">Name</label>
