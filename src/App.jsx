@@ -264,7 +264,7 @@ const TESTIMONIALS = [
 ];
 
 const STATS = [
-  { value: '4+', label: 'Years in QA' },
+  { value: '5+', label: 'Years in QA' },
   { value: '28+', label: 'Live API Integrations' },
   { value: '~40%', label: 'Manual Regression Cut' },
   { value: '5.0★', label: 'Upwork Top Rated' }
