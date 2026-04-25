@@ -467,8 +467,8 @@ function App() {
             </div>
             <h1 className="font-display text-[12vw] md:text-[10vw] leading-none font-bold tracking-tighter mb-6 flex justify-center gap-4 flex-wrap text-glow">
               <span className="sr-only">Badrul Alam - Software QA Engineer & Test Automation Architect</span>
-              <Magnetic><span>BADRUL</span></Magnetic>
-              <Magnetic><span className="text-stroke text-transparent">ALAM</span></Magnetic>
+              <SplitText>BADRUL</SplitText>
+              <SplitText>ALAM</SplitText>
             </h1>
             <p className="hero-subtitle font-display text-lg md:text-2xl tracking-widest uppercase opacity-90 mb-3">
               Software QA Engineer · <span className="gradient-text">Test Automation Architect</span>
