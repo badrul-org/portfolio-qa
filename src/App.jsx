@@ -238,7 +238,7 @@ const TESTIMONIALS = [
     accent: 'tertiary'
   },
   {
-    quote: 'He automated API validation across 15+ microservices with REST Assured and Newman, cutting manual test time roughly in half. Our release cadence doubled without sacrificing quality.',
+    quote: 'He automated API validation across 14+ microservices with REST Assured and Newman, cutting manual test time roughly in half. Our release cadence doubled without sacrificing quality.',
     name: 'Lead Developer',
     title: 'Aptovet',
     accent: 'secondary'
@@ -414,7 +414,7 @@ function App() {
           <Magnetic>
             <div className="font-display font-bold text-xl tracking-widest cursor-pointer hover-target" onClick={() => window.scrollTo(0, 0)}>B.A.</div>
           </Magnetic>
-          
+
           {/* Desktop Menu */}
           <ul className="hidden sm:flex gap-6 md:gap-8 text-xs md:text-sm font-medium tracking-wider">
             <Magnetic><li className="cursor-pointer hover-target transition-colors" onClick={() => scrollTo('about')}>ABOUT</li></Magnetic>
@@ -532,7 +532,7 @@ function App() {
                 </h2>
                 <div className="space-y-6 text-on-surface-variant text-lg leading-relaxed">
                   <p>
-                    I'm a QA engineer with 4+ years of experience building test automation for AI, fintech, and e-commerce platforms. I currently own end-to-end quality at <span className="text-white font-semibold">Kintsugi</span>, an AI-driven sales tax platform with 28+ live integrations across Shopify, Stripe, NetSuite, QuickBooks, Zuora, and more.
+                    I'm a QA engineer with 5+ years of experience building test automation for AI, fintech, and e-commerce platforms. I currently own end-to-end quality at <span className="text-white font-semibold">Kintsugi</span>, an AI-driven sales tax platform with 28+ live integrations across Shopify, Stripe, NetSuite, QuickBooks, Zuora, and more.
                   </p>
                   <p>
                     My focus is infrastructure that outlives the feature it was built for — Playwright, Postman/Newman, Selenium, Appium, and Robot Framework wired into CI/CD pipelines that give engineering teams real, actionable feedback on every commit.
