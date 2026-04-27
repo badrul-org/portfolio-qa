@@ -144,6 +144,16 @@
   animation-play-state: paused;
 }
 
+/* Rotating conic gradient border */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes spin-conic {
+  to { --angle: 360deg; }
+}
+
 /* Subtle text glow */
 .text-glow {
   text-shadow: 0 0 40px rgba(173, 198, 255, 0.5), 0 0 80px rgba(173, 198, 255, 0.25);
